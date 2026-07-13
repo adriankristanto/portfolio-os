@@ -24,11 +24,16 @@ The dev server starts at `http://localhost:5173`.
 
 ## Scripts
 
-| Script    | Command         | Purpose                          |
-| --------- | --------------- | --------------------------------- |
-| `dev`     | `vite`          | Start the local dev server        |
-| `build`   | `tsc -b && vite build`    | Production build to `dist/`       |
-| `preview` | `vite preview`  | Serve the production build locally |
+| Script         | Command                                                     | Purpose                             |
+| -------------- | ----------------------------------------------------------- | ----------------------------------- |
+| `dev`          | `vite`                                                      | Start the local dev server          |
+| `build`        | `tsc -b && vite build`                                      | Production build to `dist/`         |
+| `preview`      | `vite preview`                                              | Serve the production build locally  |
+| `lint`         | `eslint .`                                                  | Run ESLint on the project           |
+| `format`       | `prettier --write .`                                        | Format code with Prettier           |
+| `format:check` | `prettier --check .`                                        | Check code formatting with Prettier |
+| `typecheck`    | `tsc -b`                                                    | Type-check the project              |
+| `verify`       | `npm run typecheck && npm run lint && npm run format:check` | Run all verification checks         |
 
 More scripts (testing, linting, CI helpers) will be added here as they're introduced.
 
