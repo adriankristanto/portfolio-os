@@ -24,11 +24,11 @@ The dev server starts at `http://localhost:5173`.
 
 ## Scripts
 
-| Script    | Command         | Purpose                          |
-| --------- | --------------- | --------------------------------- |
-| `dev`     | `vite`          | Start the local dev server        |
-| `build`   | `tsc -b && vite build`    | Production build to `dist/`       |
-| `preview` | `vite preview`  | Serve the production build locally |
+| Script    | Command                | Purpose                            |
+| --------- | ---------------------- | ---------------------------------- |
+| `dev`     | `vite`                 | Start the local dev server         |
+| `build`   | `tsc -b && vite build` | Production build to `dist/`        |
+| `preview` | `vite preview`         | Serve the production build locally |
 
 More scripts (testing, linting, CI helpers) will be added here as they're introduced.
 
