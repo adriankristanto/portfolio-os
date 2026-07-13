@@ -1,75 +1,39 @@
-# React + TypeScript + Vite
+# Portfolio OS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website built as a simulated desktop operating system, which includes windows, a dock, a terminal, and apps. Built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Node.js 24** (pinned in `.nvmrc`)
+  - Using [mise](https://mise.jdx.dev): run `mise settings add idiomatic_version_file_enable_tools node` once, then `mise install` in this directory
+  - Using [nvm](https://github.com/nvm-sh/nvm): `nvm use`
+- **npm 10+** (ships with Node 24)
 
-## React Compiler
+Node/npm versions below the pinned minimums are rejected automatically (`.npmrc` sets `engine-strict=true`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting started
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/adriankristanto/portfolio-os.git
+cd portfolio-os
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The dev server starts at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Script    | Command         | Purpose                          |
+| --------- | --------------- | --------------------------------- |
+| `dev`     | `vite`          | Start the local dev server        |
+| `build`   | `tsc -b && vite build`    | Production build to `dist/`       |
+| `preview` | `vite preview`  | Serve the production build locally |
 
-```
+More scripts (testing, linting, CI helpers) will be added here as they're introduced.
+
+## License
+
+Code in this repository is licensed under the [MIT License](./LICENSE).
+
+Personal content and branding, including resume text, project write-ups, photos, logo, avatar, and wallpapers, is © Adrian Kristanto, all rights reserved, and is **not** covered by the MIT license.
