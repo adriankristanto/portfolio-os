@@ -1,0 +1,1 @@
+All changes to the `main` branch must be submitted through a pull request. Make sure to use the pull request template provided in `.github/pull_request_template.md` when creating a new pull request.
